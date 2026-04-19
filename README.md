@@ -11,99 +11,117 @@ K. Venkata Ram (12219197)
 📜 Patent
 Ethical AI Decision Systems for Recommending Safe and Sustainable Tourism Options
 
-⚙️ Tech Stack
+⚙️ Platform
 Android Studio · Kotlin · MVVM · Clean Architecture
 
-📱 About the App
-SmartTour360 is an Ethical AI-powered travel companion that helps users make safe, transparent, and sustainable travel decisions.
+🧠 What Is This App
+SmartTour360 is the native Android client of the TicketKaru/SmartTour360 platform — an Ethical AI-powered travel companion that provides:
 
-The app connects to a FastAPI backend using REST APIs and WebSockets.
+🚦 Real-time Green / Yellow / Red safety flags (XGBoost + SHAP)
 
-✨ Features
-🚦 Real-time Safety Flags (Green / Yellow / Red)
+🌿 Eco sustainability scores (SDG-aligned)
 
-🌿 Eco Sustainability Score (SDG-aligned)
+🔗 Blockchain-backed audit trail (Ethereum / Hyperledger Fabric)
 
-🔗 Blockchain-based Verification
+📡 Live IoT sensor streams (weather, AQI, crowd density via Zigbee/LoRaWAN)
 
-📡 Live IoT Data (Weather, AQI, Crowd Density)
+💬 Explainable AI (XAI) with plain-language reasoning
 
-💬 Explainable AI (XAI reasoning)
+💸 Dynamic pricing fairness + hidden cost detection
 
-💸 Pricing Fairness & Hidden Cost Detection
+📲 Real-time alerts via WebSocket Gossip Mesh
 
-📲 Real-time Alerts via WebSockets
+🗺️ Trip planner + smart booking with blockchain acknowledgement
 
-🗺️ Trip Planning & Booking
+The app connects to a FastAPI backend (Python 3.11 · XGBoost · SHAP · PostgreSQL · InfluxDB · Kafka · Ethereum) via HTTPS REST and WebSocket.
 
 📸 Screenshots
 Create a folder named screenshots:
 
 screenshots/
-│── screen1.png
-│── screen2.png
+├── screen1.png
+├── screen2.png
 App Preview
 Screen 1	Screen 2
-🏗️ Architecture Overview
-ANDROID APP (Kotlin · MVVM · Retrofit · Room · Hilt)
-            │
-            │ REST API + WebSocket
-            ▼
-FASTAPI BACKEND (Python · XGBoost · SHAP)
-            │
- ┌──────────┼──────────┬──────────────┐
- ▼          ▼          ▼              ▼
-PostgreSQL  InfluxDB   Blockchain     Kafka
-Users       IoT Data   Ethereum       Streams
-Bookings    Sensors    Hyperledger    Real-time
+🏗️ Full-Stack Architecture
+ANDROID APP
+(Kotlin · MVVM · Retrofit · OkHttp WS · Room · Hilt · Jetpack)
+        │
+        │ HTTPS REST + WebSocket
+        ▼
+FASTAPI BACKEND (Python 3.11)
+(XGBoost · SHAP · Pydantic · Alembic · MLflow)
+        │
+ ┌──────────────┬──────────────┬──────────────┐
+ ▼              ▼              ▼              ▼
+PostgreSQL    InfluxDB     Blockchain       Kafka
+Users         IoT Data     Ethereum         Topics
+Bookings      Sensors      Hyperledger      Streams
+Incidents     Time-series  IPFS             Real-time
 📡 Real-Time Data Sources
+Kafka Topics (IoT Ingestion)
+smarttour.sensor.weather → OpenWeatherMap API
+
+smarttour.sensor.environment → AQI / UV sensors
+
+smarttour.sensor.crowd → Zigbee/LoRaWAN wearables
+
+smarttour.alerts.safety → processed safety events
+
+External APIs
 OpenWeatherMap API
 
-AQI / Environmental Sensors
+US State Dept Travel Advisory
 
 PredictHQ Events API
 
-FareTracker Pricing API
+FareTracker Dynamic Pricing
 
-GreenCert Eco Data
+GreenCert Eco Certification
 
-IoT: Zigbee · LoRaWAN · AWS IoT Greengrass
+IoT Hardware
+Zigbee mesh (short-range sensors)
 
-🔗 Feature → Backend Mapping
-Feature	Endpoint
-Safety Evaluation	/api/v1/safety/evaluate
-Eco Ranking	/api/v1/recommendations/rank
-Pricing Analysis	/api/v1/pricing/analyze
-Blockchain Verification	/api/v1/safety/verify/{id}
-Real-time Alerts	wss://api/ws/mesh/sync
-Booking	/api/v1/booking/hotels
-🔬 Patent → Implementation
-Component	Implementation
-Ethical AI	Safety API integration
-Explainable AI	UI explanation cards
-Blockchain	Verified badge + hash
-IoT	Real-time indicators
-Mesh Network	WebSocket alerts
-Pricing	Cost transparency UI
-Sustainability	Eco scoring
-GPS	Location-based safety
-User Acknowledgement	Risk confirmation
-📁 Documentation
-01_FUNCTIONAL_REQUIREMENTS.md
+LoRaWAN (long-range environments)
 
-02_NON_FUNCTIONAL_REQUIREMENTS.md
+AWS IoT Greengrass v2 (edge inference)
 
-03_SDLC_METHODOLOGY.md
-
-04_SYSTEM_DESIGN.md
-
-05_UI_UX_SPECIFICATION.md
-
-06_TESTING_STRATEGY.md
-
-🚀 Setup
-Requirements
-Android Studio Hedgehog or later
+📱 Feature → Backend Mapping
+Android Feature	Data Source	Backend Endpoint
+Safety Flag (Green/Yellow/Red)	Kafka + Crime API + Weather	POST /api/v1/safety/evaluate
+XAI Explanation	SHAP + NLP	Included in response
+Eco Score Badge	GreenCert + Carbon Model	POST /api/v1/recommendations/rank
+Pricing Fairness	FareTracker API	POST /api/v1/pricing/analyze
+Recommendations	ML Engine	POST /api/v1/recommendations/rank
+Blockchain Verification	Ethereum	GET /api/v1/safety/verify/{id}
+Real-time Alerts	WebSocket Mesh	wss://api/ws/mesh/sync
+Hotel Booking	PostgreSQL	GET /api/v1/booking/hotels
+User Acknowledgement	Blockchain Contract	POST /api/v1/booking/acknowledge
+GPS Safety Lookup	Device Location	POST /api/v1/safety/evaluate
+📁 Documentation Index
+File	Description
+README.md	Project overview
+01_FUNCTIONAL_REQUIREMENTS.md	Features & system capabilities
+02_NON_FUNCTIONAL_REQUIREMENTS.md	Performance & security
+03_SDLC_METHODOLOGY.md	Agile Scrum process
+04_SYSTEM_DESIGN.md	Architecture & API design
+05_UI_UX_SPECIFICATION.md	UI components & screens
+06_TESTING_STRATEGY.md	Testing methods & scenarios
+🔗 Patent → Android Implementation
+Patent Component	Android Implementation
+Ethical AI Analysis	Retrofit → /safety/evaluate
+XAI Explainability	BottomSheet explanation UI
+Blockchain Verification	“Verified ✓” badge + hash
+IoT Sensor Data	AQI, weather, crowd indicators
+Mesh Network	WebSocket /ws/mesh/sync
+Pricing Fairness	Cost analysis UI
+Sustainability Engine	Eco score ranking
+GPS Integration	FusedLocationProvider
+User Acknowledgement	Blockchain logging
+Ethical Rule Engine	Ethical score chip
+🚀 Development Setup
+Prerequisites
+Android Studio Hedgehog (2023.1.1+)
 
 Kotlin 1.9+
 
@@ -111,14 +129,25 @@ Min SDK: 26
 
 Target SDK: 34
 
+Gradle 8.x
+
 Configuration
 Create local.properties:
 
 BASE_URL=http://10.0.2.2:8000/api/v1/
 WS_URL=ws://10.0.2.2:8000/ws/mesh/sync
 MAPS_API_KEY=your_google_maps_key
+🧪 Testing
+Unit Testing
+
+Integration Testing
+
+UI Testing
+
+Scenario-based evaluation (S1–S4)
+
 🏁 Conclusion
-SmartTour360 combines Ethical AI, IoT, and Blockchain to deliver a smart, safe, and sustainable tourism platform.
+SmartTour360 integrates Ethical AI, IoT, and Blockchain into a unified Android application to deliver safe, transparent, and intelligent tourism experiences.
 
 🏆 Credits
 AICTE SIH 2025 · MIC Student Innovation · LPU Patent 2026
