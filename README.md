@@ -66,10 +66,10 @@ screenshots/
 
 ---
 
-📱 ANDROID APP (This Repository)
+## 📱 ANDROID APP (This Repository)
 Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp (WebSocket) · Room · Hilt · Jetpack
         │
-        │  HTTPS (REST APIs) + WebSocket (Real-time sync)
+        │  HTTPS (REST APIs) + WebSocket (Real-time updates)
         ▼
 ⚡ FASTAPI BACKEND (Python 3.11)
 FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
@@ -77,10 +77,17 @@ FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
         ├───────────────┬───────────────┬───────────────┬───────────────┐
         ▼               ▼               ▼               ▼
 🗄️ PostgreSQL     ⏱️ InfluxDB     ⛓️ Blockchain     📡 Apache Kafka
-User Data         IoT Time-Series   Ethereum         Event Streaming
-Bookings          Sensor Metrics    Hyperledger      Real-time Topics
-Incidents         AQI / Weather     Smart Contracts  Alert Pipelines
-
+Users & Bookings  IoT Time-Series  Ethereum / Fabric  Real-time Streams
+Transactions      Sensor Data      Smart Contracts    Alerts & Events
+Incidents         AQI / Weather    Audit Trail        Kafka Topics
+        │               │               │               │
+        └───────────────┴───────────────┴───────────────┴───────────────┘
+                                │
+                                ▼
+                     🌐 External APIs & IoT Sources
+                     Weather · AQI · Events · Pricing · Sensors
+                     
+---
 ## 📡 Real-Time Data Sources  
 
 ### Kafka Topics (IoT ingestion)
