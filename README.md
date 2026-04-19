@@ -140,7 +140,7 @@ PostgreSQL   InfluxDB     Blockchain      Kafka
 
 ### 🔧 Configuration
 
-Create `local.properties` (**DO NOT COMMIT**):
+Create `local.properties` 
 
 ```
 BASE_URL=http://10.0.2.2:8000/api/v1/
