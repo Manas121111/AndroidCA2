@@ -67,27 +67,26 @@ screenshots/
 ---
 
 ##  📱 ANDROID APP
-   Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp · Room · Hilt · Jetpack
+Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp · Room · Hilt · Jetpack
         │
-        │  HTTPS (REST) + WebSocket
+        │  HTTPS (REST) + WebSocket (Real-time updates)
         ▼
 ⚡ FASTAPI BACKEND
-   FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
+FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
         │
-        ├───────────────┬───────────────┬───────────────┬───────────────┐
-        │               │               │               │
-        ▼               ▼               ▼               ▼
-🗄️ PostgreSQL     ⏱️ InfluxDB     ⛓️ Blockchain     📡 Apache Kafka
-   Users             IoT Data         Ethereum         Streams
-   Bookings          AQI/Weather      Hyperledger      Events
-   Transactions      Sensors          Contracts        Alerts
-   Incidents         Time-series      Audit Logs       Topics
-        │               │               │               │
-        └───────────────┴───────────────┴───────────────┴───────────────┘
-                                │
-                                ▼
-                     🌐 External APIs & IoT
-                     Weather · AQI · Events · Pricing · Sensors
+        ├──────────────────────┬──────────────────────┬──────────────────────┬──────────────────────┐
+        │                      │                      │                      │
+        ▼                      ▼                      ▼                      ▼
+🗄️ POSTGRESQL            ⏱️ INFLUXDB          ⛓️ BLOCKCHAIN          📡 APACHE KAFKA
+Users & Bookings        IoT Time-Series      Ethereum / Fabric      Real-time Streams
+Transactions            Weather / AQI        Smart Contracts        Event Topics
+Incidents               Sensor Data          Audit Logs             Alerts Pipeline
+        │                      │                      │                      │
+        └──────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
+                                   │
+                                   ▼
+                    🌐 EXTERNAL APIS + IOT SOURCES
+              Weather · AQI · Events · Pricing · Sensors
                      
 ---
 ## 📡 Real-Time Data Sources  
