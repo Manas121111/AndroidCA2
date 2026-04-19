@@ -14,6 +14,19 @@ Android Studio · Kotlin · MVVM · Clean Architecture
 
 ---
 
+## 🎯 Project Vision  
+
+SmartTour360 aims to build a **trust-first tourism ecosystem** by combining:
+
+- Ethical AI decision-making  
+- Real-time environmental awareness  
+- Transparent blockchain verification  
+- Sustainable travel recommendations  
+
+The goal is to ensure **safe, responsible, and informed travel experiences**.
+
+---
+
 ## 🧠 What Is This App  
 
 SmartTour360 is the native Android client of the TicketKaru/SmartTour360 platform — an Ethical AI-powered travel companion that gives Indian travelers:
@@ -31,6 +44,16 @@ This app connects to the FastAPI backend (Python 3.11 · XGBoost · SHAP · Post
 
 ---
 
+## 🚀 Key Highlights  
+
+- Ethical AI-based decision system (Patent-backed)  
+- Integration of AI + IoT + Blockchain in one platform  
+- Real-time safety intelligence using streaming data  
+- Transparent and explainable recommendations  
+- Scalable microservice-based backend architecture  
+
+---
+
 ## 📸 Screenshots  
 
 screenshots/
@@ -44,53 +67,43 @@ screenshots/
 ---
 
 ## 🏗️ Full-Stack Architecture  
-┌──────────────────────────────────────────────────────────────────┐
-│ ANDROID APP (This Repo) │
-│ Kotlin · MVVM · Retrofit · OkHttp WS · Room · Hilt · Jetpack │
-└───────────────────────────┬──────────────────────────────────────┘
-│ HTTPS REST + wss:// WebSocket
-┌───────────────────────────▼──────────────────────────────────────┐
-│ FASTAPI BACKEND (Python 3.11) │
-│ XGBoost + SHAP · Pydantic · Alembic · MLflow │
-│ ┌──────────────────┐ ┌──────────────┐ ┌──────────────────┐ │
-│ │ Risk Calculator │ │ XAI Explainer│ │Ethical Guardrails│ │
-│ │ R = w1·S_struct │ │ SHAP + NL │ │ 5 hard rules │ │
-│ │ + w2·S_sit │ │ templates │ │ (patent-defined) │ │
-│ │ + w3·S_env │ └──────────────┘ └──────────────────┘ │
-│ └──────────────────┘ │
-│ ┌──────────────────────────────────────────────────────────┐ │
-│ │ Recommendation Engine · Eco Score · Pricing Fairness │ │
-│ │ Predictive Ecological Impact · WebSocket Gossip Mesh │ │
-│ └──────────────────────────────────────────────────────────┘ │
-└────────┬─────────────────────┬────────────────┬──────────────────┘
-│ │ │
-┌────────▼──────┐ ┌───────────▼──────┐ ┌─────▼─────────────────┐
-│ PostgreSQL │ │ InfluxDB │ │ Blockchain Ledger │
-│ Users, │ │ IoT time-series │ │ Ethereum + Solidity │
-│ evaluations, │ │ sensor_readings │ │ IPFS for payloads │
-│ bookings, │ │ 30d retention │ │ Hyperledger (prod) │
-│ incidents │ └──────────────────┘ └───────────────────────┘
-└───────────────┘
+ANDROID APP (This Repo)
+Kotlin · MVVM · Retrofit · OkHttp WS · Room · Hilt · Jetpack
 │
-┌────────▼──────────────────────────────────────────────────────┐
-│ REAL-TIME DATA SOURCES │
-│ Kafka Topics (IoT ingestion): │
-│ smarttour.sensor.weather ← OpenWeatherMap API │
-│ smarttour.sensor.environment ← AQI / UV sensors │
-│ smarttour.sensor.crowd ← Zigbee/LoRaWAN wearables │
-│ smarttour.alerts.safety ← Processed flag events │
-│ External Free APIs: │
-│ OpenWeatherMap API weather + alerts │
-│ US State Dept Travel Advisory government safety advisories │
-│ PredictHQ Events API crowd / local event risk │
-│ FareTracker Dynamic Pricing pricing fairness │
-│ GreenCert Eco Certification eco scores │
-│ IoT Hardware: │
-│ Zigbee mesh short-range indoor/venue sensors │
-│ LoRaWAN long-range wilderness / off-grid │
-│ AWS IoT Greengrass v2 edge ML inference │
-└───────────────────────────────────────────────────────────────┘
+│ HTTPS REST + WebSocket
+▼
+FASTAPI BACKEND (Python 3.11)
+XGBoost · SHAP · Pydantic · Alembic · MLflow
+│
+┌──────────────┬──────────────┬──────────────┐
+▼ ▼ ▼ ▼
+PostgreSQL InfluxDB Blockchain Kafka
+Users IoT Data Ethereum Topics
+Bookings Sensors Hyperledger Streams
+Incidents Time-series IPFS Real-time
 
+
+---
+
+## 📡 Real-Time Data Sources  
+
+### Kafka Topics (IoT ingestion)
+- smarttour.sensor.weather → OpenWeatherMap API  
+- smarttour.sensor.environment → AQI / UV sensors  
+- smarttour.sensor.crowd → Zigbee/LoRaWAN wearables  
+- smarttour.alerts.safety → processed flag events  
+
+### External APIs
+- OpenWeatherMap API  
+- US State Dept Travel Advisory  
+- PredictHQ Events API  
+- FareTracker Dynamic Pricing  
+- GreenCert Eco Certification  
+
+### IoT Hardware
+- Zigbee mesh (short-range indoor sensors)  
+- LoRaWAN (long-range outdoor coverage)  
+- AWS IoT Greengrass v2 (edge ML inference)  
 
 ---
 
@@ -116,29 +129,42 @@ screenshots/
 | File | Contents |
 |------|---------|
 | README.md | You are here |
-| 01_FUNCTIONAL_REQUIREMENTS.md | What the app must do — Auth, Safety AI, IoT, Blockchain, Eco, Booking, Mesh Alerts |
-| 02_NON_FUNCTIONAL_REQUIREMENTS.md | Performance, Security, Ethical AI NFRs aligned to patent |
-| 03_SDLC_METHODOLOGY.md | Agile Scrum — 8 sprints, patent milestone phases |
-| 04_SYSTEM_DESIGN.md | MVVM layers, Room schema, full API contracts, risk formula, mesh WebSocket |
-| 05_UI_UX_SPECIFICATION.md | All screens, design tokens, XAI explanation card, blockchain chip |
-| 06_TESTING_STRATEGY.md | Unit/Integration/UI tests + 4-scenario patent evaluation (S1–S4) |
+| 01_FUNCTIONAL_REQUIREMENTS.md | System functionality |
+| 02_NON_FUNCTIONAL_REQUIREMENTS.md | Performance & security |
+| 03_SDLC_METHODOLOGY.md | Agile Scrum |
+| 04_SYSTEM_DESIGN.md | Architecture & API |
+| 05_UI_UX_SPECIFICATION.md | UI design |
+| 06_TESTING_STRATEGY.md | Testing methods |
 
 ---
 
 ## 🔗 Patent → Android Implementation Map  
 
-| Patent Component (LPU IDF 2026) | Android Implementation |
-|--------------------------------|----------------------|
-| Ethical AI Analysis Module | Retrofit → /safety/evaluate → ViewModel parses XGBoost result |
-| XAI Explainability (SHAP + NL) | BottomSheet: explanation field rendered as plain-language card |
-| Blockchain Verification Layer | "Verified ✓" chip on cards; blockchain_ref hash displayed |
-| IoT Sensor Data (Kafka streams) | Real-time AQI, weather, crowd bars on destination detail screen |
-| Decentralized Mesh Network | OkHttp WebSocket → /ws/mesh/sync for live push alerts |
-| Dynamic Pricing + Hidden Costs | Pricing fairness card on hotel detail; hidden fee warnings |
-| Responsible Tourism Engine | Eco score badge + ranked list with sustainability index |
-| GPS Integration | FusedLocationProviderClient → lat/lon in every safety call |
-| User Acknowledgement on Blockchain | RED flag → "I acknowledge the risk" dialog → logged on-chain |
-| IF-THEN Ethical Rule | Ethical Score chip: HIGH / MODERATE / LOW on destination card |
+| Patent Component | Android Implementation |
+|------------------|----------------------|
+| Ethical AI Analysis Module | Retrofit → /safety/evaluate |
+| XAI Explainability | BottomSheet explanation UI |
+| Blockchain Verification | "Verified ✓" badge |
+| IoT Sensor Data | Real-time indicators |
+| Mesh Network | WebSocket alerts |
+| Pricing Fairness | Cost transparency UI |
+| Sustainability Engine | Eco score ranking |
+| GPS Integration | Location-based safety |
+| User Acknowledgement | Blockchain logging |
+| Ethical Rule Engine | Ethical score chip |
+
+---
+
+## 🛠️ Technology Stack  
+
+- **Frontend:** Android (Kotlin)  
+- **Architecture:** MVVM + Clean Architecture  
+- **Networking:** Retrofit, OkHttp  
+- **Database:** Room  
+- **Backend:** FastAPI  
+- **AI/ML:** XGBoost, SHAP  
+- **Streaming:** Apache Kafka  
+- **Blockchain:** Ethereum, Hyperledger  
 
 ---
 
@@ -153,12 +179,38 @@ Gradle 8.x
 
 ---
 
-### local.properties (NEVER commit this file)  
+### local.properties (NEVER commit this file)
 BASE_URL=http://10.0.2.2:8000/api/v1/
 WS_URL=ws://10.0.2.2:8000/ws/mesh/sync
 MAPS_API_KEY=your_google_maps_key
 
 
 ---
+
+## 🧪 Testing  
+
+- Unit Testing  
+- Integration Testing  
+- UI Testing  
+- Scenario-based evaluation (S1–S4)  
+
+---
+
+## 🔮 Future Scope  
+
+- Offline AI inference support  
+- Advanced route optimization  
+- Integration with more global APIs  
+- Enhanced real-time analytics dashboard  
+
+---
+
+## 🏁 Conclusion  
+
+SmartTour360 integrates Ethical AI, IoT, and Blockchain into a unified Android platform to deliver safe, transparent, and intelligent tourism experiences.
+
+---
+
+## 🏆 Credits  
 
 AICTE SIH 2025 · MIC-Student Innovation · LPU Patent 2026  
