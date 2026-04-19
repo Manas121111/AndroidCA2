@@ -66,28 +66,39 @@ screenshots/
 
 ---
 
-##  📱 ANDROID APP
-Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp · Room · Hilt · Jetpack
-        │
-        │  HTTPS (REST) + WebSocket (Real-time updates)
-        ▼
-⚡ FASTAPI BACKEND
-FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
-        │
-        ├──────────────────────┬──────────────────────┬──────────────────────┬──────────────────────┐
-        │                      │                      │                      │
+##    🌏 SmartTour360 Architecture Flow
+
+┌──────────────────────────────────────────────────────────────┐
+│                    📱 ANDROID APP (Client)                   │
+│ Kotlin · MVVM · Clean Architecture · Retrofit · WebSocket    │
+│ Room · Hilt · Jetpack                                        │
+└──────────────────────────────────────────────────────────────┘
+                               │
+                               │ HTTPS (REST) + WebSocket
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│                 ⚡ FASTAPI BACKEND (Core Engine)              │
+│ FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic       │
+└──────────────────────────────────────────────────────────────┘
+                               │
+        ┌──────────────────────┼──────────────────────┬──────────────────────┬──────────────────────┐
         ▼                      ▼                      ▼                      ▼
-🗄️ POSTGRESQL            ⏱️ INFLUXDB          ⛓️ BLOCKCHAIN          📡 APACHE KAFKA
-Users & Bookings        IoT Time-Series      Ethereum / Fabric      Real-time Streams
-Transactions            Weather / AQI        Smart Contracts        Event Topics
-Incidents               Sensor Data          Audit Logs             Alerts Pipeline
+┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐  ┌──────────────────┐
+│ 🗄️ PostgreSQL     │  │ ⏱️ InfluxDB      │  │ ⛓️ Blockchain     │  │ 📡 Apache Kafka   │
+│ Users            │  │ IoT Sensor Data  │  │ Ethereum/Fabric  │  │ Real-time Streams │
+│ Bookings         │  │ Weather / AQI    │  │ Smart Contracts  │  │ Alerts & Events   │
+│ Transactions     │  │ Time-series      │  │ Audit Logs       │  │ Event Topics      │
+│ Incidents        │  │                  │  │                  │  │                  │
+└──────────────────┘  └──────────────────┘  └──────────────────┘  └──────────────────┘
         │                      │                      │                      │
         └──────────────────────┴──────────────────────┴──────────────────────┴──────────────────────┘
-                                   │
-                                   ▼
-                    🌐 EXTERNAL APIS + IOT SOURCES
-              Weather · AQI · Events · Pricing · Sensors
-                     
+                               │
+                               ▼
+┌──────────────────────────────────────────────────────────────┐
+│              🌐 External APIs + IoT Devices                 │
+│ Weather API · AQI API · Event APIs · Pricing APIs          │
+│ Zigbee Sensors · LoRaWAN Devices · IoT Edge Systems        │
+└──────────────────────────────────────────────────────────────┘
 ---
 ## 📡 Real-Time Data Sources  
 
