@@ -66,7 +66,7 @@ screenshots/
 
 ---
 
-## 📱 ANDROID APP (This Repository)
+##  📱 ANDROID APP (This Repository)
 Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp (WebSocket) · Room · Hilt · Jetpack
         │
         │  HTTPS (REST APIs) + WebSocket (Real-time updates)
@@ -77,9 +77,9 @@ FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
         ├───────────────┬───────────────┬───────────────┬───────────────┐
         ▼               ▼               ▼               ▼
 🗄️ PostgreSQL     ⏱️ InfluxDB     ⛓️ Blockchain     📡 Apache Kafka
-Users & Bookings  IoT Time-Series  Ethereum / Fabric  Real-time Streams
-Transactions      Sensor Data      Smart Contracts    Alerts & Events
-Incidents         AQI / Weather    Audit Trail        Kafka Topics
+Users & Bookings  IoT Time-Series  Ethereum/Fabric   Real-time Streams
+Transactions      Sensor Data      Smart Contracts   Alerts & Events
+Incidents         AQI / Weather    Audit Trail       Kafka Topics
         │               │               │               │
         └───────────────┴───────────────┴───────────────┴───────────────┘
                                 │
