@@ -66,24 +66,20 @@ screenshots/
 
 ---
 
-## 🏗️ Full-Stack Architecture  
-ANDROID APP (This Repo)
-Kotlin · MVVM · Retrofit · OkHttp WS · Room · Hilt · Jetpack
-│
-│ HTTPS REST + WebSocket
-▼
-FASTAPI BACKEND (Python 3.11)
-XGBoost · SHAP · Pydantic · Alembic · MLflow
-│
-┌──────────────┬──────────────┬──────────────┐
-▼ ▼ ▼ ▼
-PostgreSQL InfluxDB Blockchain Kafka
-Users IoT Data Ethereum Topics
-Bookings Sensors Hyperledger Streams
-Incidents Time-series IPFS Real-time
-
-
----
+📱 ANDROID APP (This Repository)
+Kotlin · MVVM · Clean Architecture · Retrofit · OkHttp (WebSocket) · Room · Hilt · Jetpack
+        │
+        │  HTTPS (REST APIs) + WebSocket (Real-time sync)
+        ▼
+⚡ FASTAPI BACKEND (Python 3.11)
+FastAPI · Pydantic · XGBoost · SHAP · MLflow · Alembic
+        │
+        ├───────────────┬───────────────┬───────────────┬───────────────┐
+        ▼               ▼               ▼               ▼
+🗄️ PostgreSQL     ⏱️ InfluxDB     ⛓️ Blockchain     📡 Apache Kafka
+User Data         IoT Time-Series   Ethereum         Event Streaming
+Bookings          Sensor Metrics    Hyperledger      Real-time Topics
+Incidents         AQI / Weather     Smart Contracts  Alert Pipelines
 
 ## 📡 Real-Time Data Sources  
 
