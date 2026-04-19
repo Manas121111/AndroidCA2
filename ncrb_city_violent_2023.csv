@@ -1,0 +1,21 @@
+Sl. No.,City,Murder (Sec.302 IPC) - (Col. 3),Culpable Homicide not amounting to Murder (Sec.304 IPC) - (Col. 4),Infanticide (Sec.315 IPC) - (Col. 5),Foeticide (Sec.316 IPC) - (Col. 6),Dowry Deaths (Sec.304B IPC) - (Col. 7),Attempt to Commit Murder (Sec.307 IPC) - (Col. 8),Attempt to Commit Culpable Homicide (Sec.308 IPC) - (Col. 9),"Grievous Hurt (Sec.325, 326, 326A & 326B IPC) - (Col. 10)",Kidnapping and Abduction (Sec.363-369 IPC) - (Col. 11),Rape (Sec.376 IPC) - (Col. 12),Attempt to Commit Rape (Sec.376 r/w 511 IPC) - (Col. 13),Rioting (Sec.147-151 & 153A IPC) - (Col. 14),Robbery (Sec.392 to 394 IPC) - (Col. 15),Dacoity (Sec.395 to 398 IPC) - (Col. 16),Arson (Sec.435 to 438 IPC) - (Col. 17),Total Violent Crimes (Col.3 to 17) - (Col. 18)
+1,Ahmedabad (Gujarat),109,6,1,0,5,110,6,415,296,109,0,28,132,12,40,1269
+2,Bengaluru (Karnataka),206,25,0,0,25,537,11,356,1158,169,4,165,790,37,45,3528
+3,Chennai (Tamil Nadu),105,11,0,0,0,254,2,146,27,20,2,43,326,17,20,973
+4,Coimbatore (Tamil Nadu),22,1,0,0,0,32,0,35,16,6,0,12,77,3,9,213
+5,Delhi City,503,72,2,0,114,753,622,371,5681,1088,0,44,1644,29,91,11014
+6,Ghaziabad (Uttar Pradesh),45,14,0,0,26,35,24,139,33,83,1,19,40,2,5,466
+7,Hyderabad (Telangana),94,9,0,0,15,292,0,123,592,173,0,17,102,19,47,1483
+8,Indore (Madhya Pradesh),51,9,0,0,21,160,42,105,715,186,2,24,280,2,44,1641
+9,Jaipur (Rajasthan),129,12,0,1,38,136,8,11,927,573,19,46,160,3,17,2080
+10,Kanpur (Uttar Pradesh),97,19,0,0,45,52,42,154,373,86,2,14,16,2,0,902
+11,Kochi (Kerala),12,19,0,0,1,41,186,91,16,94,2,3,71,15,4,555
+12,Kolkata (West Bengal),43,8,0,0,6,130,7,368,281,10,0,40,14,2,10,919
+13,Kozhikode (Kerala),6,3,0,0,0,22,110,58,27,44,1,122,59,4,8,464
+14,Lucknow (Uttar Pradesh),98,28,0,0,45,90,62,857,720,151,1,26,152,1,5,2236
+15,Mumbai (Maharashtra),124,10,2,1,8,293,3,1055,1798,387,0,270,758,25,16,4750
+16,Nagpur (Maharashtra),79,13,0,0,6,121,1,228,520,132,0,91,233,18,26,1468
+17,Patna (Bihar),91,0,0,0,30,363,0,469,806,49,0,28,94,5,0,1935
+18,Pune (Maharashtra),101,4,1,0,6,244,14,319,787,196,0,220,349,34,21,2296
+19,Surat (Gujarat),89,11,0,1,1,49,3,146,266,50,0,7,37,7,8,675
+Total Cities,Total Cities,2004,274,6,3,392,3714,1143,5446,15039,3606,34,1219,5334,237,416,38867
